@@ -1,11 +1,18 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from 'react';
+import ImageUploader from '../components/ImageUploader';
+import GradeDisplay from '../components/GradeDisplay';
 
 const Index = () => {
+  const [image, setImage] = useState<string | null>(null);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen w-full bg-white flex items-center justify-center p-4">
+      <div className="w-full max-w-4xl">
+        <div className="flex flex-col md:flex-row gap-6">
+          <ImageUploader image={image} setImage={setImage} />
+          <GradeDisplay />
+        </div>
       </div>
     </div>
   );
