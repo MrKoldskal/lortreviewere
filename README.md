@@ -1,73 +1,42 @@
-# Welcome to your Lovable project
+💩 Smart Poop Analyzer — AI-powered Website
 
-## Project info
+Welcome to Smart Poop Analyzer, a minimalist web app where you upload a photo of your poop 💩, and our AI instantly analyzes it based on 4 key categories:
 
-**URL**: https://lovable.dev/projects/fbe39313-d826-48b7-85f8-2ea937b276a5
+    🥗 Diet
 
-## How can I edit this code?
+    🏛️ Form
 
-There are several ways of editing your application.
+    🎨 Color
 
-**Use Lovable**
+    🧈 Consistency
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fbe39313-d826-48b7-85f8-2ea937b276a5) and start prompting.
+You'll get personalized tips on how to improve your bowel health based on the results!
+✨ Features
 
-Changes made via Lovable will be committed automatically to this repo.
+    Clean and simple UI with a beige background 🎨
 
-**Use your preferred IDE**
+    Easy drag & drop "Upload file" area 📤
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+    AI-driven analysis across 4 important health categories 🧠
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+    Instant feedback and suggestions to optimize your digestion 🌱
 
-Follow these steps:
+🚀 How It Works
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+    Upload a picture of your poop 💩.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+    AI evaluates it based on diet, form, color, and consistency.
 
-# Step 3: Install the necessary dependencies.
-npm i
+    Get practical advice to improve your gut health.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+📈 Why?
 
-**Edit a file directly in GitHub**
+Gut health is essential for your overall well-being!
+This fun but serious tool helps you make smarter food and lifestyle choices, based on what your body is telling you. 🧘‍♂️🥑
+⚡️ Coming Soon
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+    Historical tracking 📊
 
-**Use GitHub Codespaces**
+    Advanced health reports 📑
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/fbe39313-d826-48b7-85f8-2ea937b276a5) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+    Nutrition guides 🍎
