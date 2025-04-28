@@ -1,6 +1,6 @@
 
 import { useState, useCallback } from 'react';
-import { Image as ImageIcon } from 'lucide-react';
+import { Image as ImageIcon, Loader2 } from 'lucide-react';
 
 interface ImageUploaderProps {
   image: string | null;
@@ -63,7 +63,7 @@ const ImageUploader = ({ image, setImage }: ImageUploaderProps) => {
       />
       <label 
         htmlFor="file-upload"
-        className={`block w-full aspect-square border-2 border-[#dddddd] rounded cursor-pointer transition-colors flex items-center justify-center ${
+        className={`block w-full aspect-square border-2 border-[#dddddd] rounded cursor-pointer transition-colors ${
           isDragging ? 'bg-gray-50' : 'bg-white'
         }`}
         onDragOver={handleDragOver}
@@ -80,7 +80,10 @@ const ImageUploader = ({ image, setImage }: ImageUploaderProps) => {
           <div className="text-center p-6">
             <ImageIcon className="h-12 w-12 mx-auto text-gray-400" />
             <p className="mt-2 text-sm text-gray-500 font-sans">
-              Drag and drop an image here, or click to upload
+              Upload an image of your stool for analysis
+            </p>
+            <p className="text-xs text-gray-400 mt-1 font-sans">
+              Drag and drop or click to upload
             </p>
           </div>
         )}
