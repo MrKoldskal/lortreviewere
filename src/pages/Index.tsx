@@ -33,12 +33,10 @@ const Index = () => {
   };
   
   return (
-    <div className="min-h-screen w-full bg-white flex items-center justify-center p-4">
-      <div className="w-full max-w-3xl">
-        <div className="flex flex-col md:flex-row gap-8">
-          <ImageUploader image={image} setImage={handleImageChange} />
-          <GradeDisplay analysis={analysis} isLoading={isAnalyzing} />
-        </div>
+    <div className="min-h-screen w-full bg-[#F5F2EA] flex items-center justify-center p-4">
+      <div className="w-full max-w-3xl flex flex-row items-start justify-between gap-16">
+        <ImageUploader image={image} setImage={handleImageChange} />
+        <GradeDisplay analysis={analysis} isLoading={isAnalyzing} />
       </div>
     </div>
   );

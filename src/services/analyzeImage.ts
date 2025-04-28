@@ -17,14 +17,14 @@ export const analyzeImage = async (imageBase64: string): Promise<ShitAnalysisRes
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    // Generate pseudo-random scores between 40-95
-    const getRandomScore = () => Math.floor(Math.random() * 55) + 40;
+    // Generate pseudo-random scores
+    const getRandomScore = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
     
     const result: ShitAnalysisResult = {
-      diet: getRandomScore(),
-      form: getRandomScore(),
-      color: getRandomScore(),
-      consistency: getRandomScore(),
+      diet: getRandomScore(70, 100),
+      form: getRandomScore(70, 100),
+      color: getRandomScore(70, 100),
+      consistency: getRandomScore(5, 15),
       tips: [
         "Øg dit fiberindtag for bedre konsistens",
         "Hold dig hydreret ved at drikke mere vand gennem dagen",

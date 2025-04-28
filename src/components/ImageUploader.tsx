@@ -1,6 +1,6 @@
 
 import { useState, useCallback } from 'react';
-import { Image as ImageIcon } from 'lucide-react';
+import { Upload } from 'lucide-react';
 
 interface ImageUploaderProps {
   image: string | null;
@@ -53,7 +53,7 @@ const ImageUploader = ({ image, setImage }: ImageUploaderProps) => {
   }, [setImage]);
 
   return (
-    <div className="flex-1 min-w-0">
+    <div>
       <input 
         type="file" 
         id="file-upload" 
@@ -63,8 +63,8 @@ const ImageUploader = ({ image, setImage }: ImageUploaderProps) => {
       />
       <label 
         htmlFor="file-upload"
-        className={`block w-full aspect-square border border-[#dddddd] rounded cursor-pointer transition-colors ${
-          isDragging ? 'bg-gray-50' : 'bg-white'
+        className={`block w-64 h-48 bg-[#222222] rounded-lg cursor-pointer flex flex-col items-center justify-center transition-colors ${
+          isDragging ? 'bg-gray-800' : 'bg-[#222222]'
         }`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
@@ -74,16 +74,13 @@ const ImageUploader = ({ image, setImage }: ImageUploaderProps) => {
           <img 
             src={image} 
             alt="Uploadet billede" 
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain rounded-lg"
           />
         ) : (
-          <div className="text-center p-6">
-            <ImageIcon className="h-8 w-8 mx-auto text-gray-400" />
-            <p className="mt-2 text-xs text-gray-500 font-sans">
-              Upload et billede af din afføring til analyse
-            </p>
-            <p className="text-xs text-gray-400 mt-1 font-sans">
-              Træk og slip eller klik for at uploade
+          <div className="text-center p-6 text-white">
+            <Upload className="h-8 w-8 mx-auto mb-4" />
+            <p className="text-2xl font-light">
+              Upload fil
             </p>
           </div>
         )}
