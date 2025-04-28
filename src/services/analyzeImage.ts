@@ -1,7 +1,6 @@
 
 import { toast } from "sonner";
 
-// Mock AI analysis response type
 export interface ShitAnalysisResult {
   diet: number;
   form: number;
@@ -10,7 +9,6 @@ export interface ShitAnalysisResult {
   tips: string[];
 }
 
-// Function to analyze the uploaded image
 export const analyzeImage = async (imageBase64: string): Promise<ShitAnalysisResult> => {
   try {
     // In a real implementation, this would be an API call to an AI service
@@ -28,11 +26,11 @@ export const analyzeImage = async (imageBase64: string): Promise<ShitAnalysisRes
       color: getRandomScore(),
       consistency: getRandomScore(),
       tips: [
-        "Increase your fiber intake for better consistency",
-        "Stay hydrated by drinking more water throughout the day",
-        "Consider adding more leafy greens to your diet",
-        "Reduce processed food consumption for healthier bowel movements",
-        "Regular exercise can help improve digestion"
+        "Øg dit fiberindtag for bedre konsistens",
+        "Hold dig hydreret ved at drikke mere vand gennem dagen",
+        "Overvej at tilføje flere bladgrøntsager til din kost",
+        "Reducer indtag af forarbejdede fødevarer for sundere fordøjelse",
+        "Regelmæssig motion kan hjælpe med at forbedre fordøjelsen"
       ]
     };
     
@@ -42,14 +40,14 @@ export const analyzeImage = async (imageBase64: string): Promise<ShitAnalysisRes
     
     return result;
   } catch (error) {
-    console.error("Error analyzing image:", error);
-    toast.error("Failed to analyze image. Please try again.");
+    console.error("Fejl ved analyse af billede:", error);
+    toast.error("Kunne ikke analysere billedet. Prøv igen.");
     return {
       diet: 0,
       form: 0, 
       color: 0,
       consistency: 0,
-      tips: ["Unable to analyze image"]
+      tips: ["Kunne ikke analysere billedet"]
     };
   }
 };

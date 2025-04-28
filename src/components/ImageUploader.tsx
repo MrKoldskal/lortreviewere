@@ -1,6 +1,6 @@
 
 import { useState, useCallback } from 'react';
-import { Image as ImageIcon, Loader2 } from 'lucide-react';
+import { Image as ImageIcon } from 'lucide-react';
 
 interface ImageUploaderProps {
   image: string | null;
@@ -63,7 +63,7 @@ const ImageUploader = ({ image, setImage }: ImageUploaderProps) => {
       />
       <label 
         htmlFor="file-upload"
-        className={`block w-full aspect-square border-2 border-[#dddddd] rounded cursor-pointer transition-colors ${
+        className={`block w-full aspect-square border border-[#dddddd] rounded cursor-pointer transition-colors ${
           isDragging ? 'bg-gray-50' : 'bg-white'
         }`}
         onDragOver={handleDragOver}
@@ -73,17 +73,17 @@ const ImageUploader = ({ image, setImage }: ImageUploaderProps) => {
         {image ? (
           <img 
             src={image} 
-            alt="Uploaded image" 
+            alt="Uploadet billede" 
             className="w-full h-full object-contain"
           />
         ) : (
           <div className="text-center p-6">
-            <ImageIcon className="h-12 w-12 mx-auto text-gray-400" />
-            <p className="mt-2 text-sm text-gray-500 font-sans">
-              Upload an image of your stool for analysis
+            <ImageIcon className="h-8 w-8 mx-auto text-gray-400" />
+            <p className="mt-2 text-xs text-gray-500 font-sans">
+              Upload et billede af din afføring til analyse
             </p>
             <p className="text-xs text-gray-400 mt-1 font-sans">
-              Drag and drop or click to upload
+              Træk og slip eller klik for at uploade
             </p>
           </div>
         )}

@@ -18,13 +18,12 @@ const Index = () => {
       setAnalysis(null);
       
       try {
-        // Analyze the image
         const result = await analyzeImage(newImage);
         setAnalysis(result);
-        toast.success("Analysis complete!");
+        toast.success("Analyse fuldført!");
       } catch (error) {
-        console.error("Analysis error:", error);
-        toast.error("Failed to analyze the image");
+        console.error("Analysefejl:", error);
+        toast.error("Kunne ikke analysere billedet");
       } finally {
         setIsAnalyzing(false);
       }
@@ -35,8 +34,8 @@ const Index = () => {
   
   return (
     <div className="min-h-screen w-full bg-white flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl">
-        <div className="flex flex-col md:flex-row gap-6">
+      <div className="w-full max-w-3xl">
+        <div className="flex flex-col md:flex-row gap-8">
           <ImageUploader image={image} setImage={handleImageChange} />
           <GradeDisplay analysis={analysis} isLoading={isAnalyzing} />
         </div>
